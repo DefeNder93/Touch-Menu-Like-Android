@@ -152,7 +152,8 @@ var TouchMenuLA = function (options) {
 
     TouchMenuLA.prototype.open = function () {
         options.target.className = menuClassName + " tmla-menu opened";
-        this.animateToPosition(options.width);
+        var isRtl = getComputedStyle(document.body).direction === 'rtl';
+        this.animateToPosition(isRtl ? 0 : options.width);
 
         currentPos = options.width;
         this.isVisible = true;

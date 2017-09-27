@@ -40,3 +40,13 @@
     opacity: 0.0;
     z-index: -1;
 }
+
+body[style*="direction: rtl;"] .touch-menu-la {
+    transform: translate3d(280px, 0px, 0px);
+    -webkit-transform: translate3d(280px, 0px, 0px);
+}
+
+body[style*="direction: rtl;"] .touch-menu-la.closed {
+    transform: translate3d(280px, 0px, 0px) !important;
+    -webkit-transform: translate3d(280px, 0px, 0px) !important;
+}
